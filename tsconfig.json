@@ -1,28 +1,7 @@
 {
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "target": "es5",
-    "module": "commonjs",
-    "lib": ["es2015"],
-    "declaration": true,
-    "sourceMap": true,
-    "outDir": "dist",
-    "rootDir": "src",
-
-    "strict": true,
-
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "resolveJsonModule": true
   },
-  "include": ["src"],
-  "exclude": ["**/*.stories.*", "dist", "node_modules"]
+  "exclude": ["coverage", "dist", "node_modules"]
 }

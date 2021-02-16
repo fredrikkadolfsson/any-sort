@@ -7,14 +7,6 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
-    "unicorn/filename-case": [
-      "error",
-      {
-        "cases": {
-          "camelCase": true,
-          "pascalCase": true
-        }
-      }
-    ]
+    "unicorn/no-useless-undefined": ["error", { "checkArguments": false }]
   }
 }
