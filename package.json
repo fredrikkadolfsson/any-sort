@@ -1,6 +1,6 @@
 {
   "name": "true-sort",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Truly sort anything, and with zero dependencies 🚀",
   "keywords": [
     "array",
@@ -34,7 +34,7 @@
     "postpublish": "pinst --enable",
     "prepare": "yarn build",
     "prepublishOnly": "pinst --disable",
-    "release": "standard-version",
+    "release": "standard-version -m 'chore(release): Release v%s :tada: [skip ci]'",
     "test": "jest"
   },
   "devDependencies": {
