@@ -34,7 +34,7 @@
     "postpublish": "pinst --enable",
     "prepare": "yarn build",
     "prepublishOnly": "pinst --disable",
-    "release": "standard-version -m 'chore(release): Release v%s :tada: [skip ci]'",
+    "release": "standard-version -m 'chore(release): release v%s :tada: [skip ci]'",
     "test": "jest"
   },
   "devDependencies": {
