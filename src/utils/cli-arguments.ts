@@ -1,21 +1,19 @@
 import fs from "node:fs";
-import type { UnknownObject } from "../types";
 import type { Options } from "./options";
 
-const isFlag = (s: string): boolean => s.startsWith("--");
-const parsValue = (s: string): string | string[] =>
-  s.includes(",") ? s.split(",") : s;
+const isFlag = (s: string) => s.startsWith("--");
+const parsValue = (s: string) => (s.includes(",") ? s.split(",") : s);
 
-export const parseArguments = (): { path: string; options: Options } => {
+export const parseArguments = () => {
   let probablyPath = "";
-  const options: UnknownObject = {};
+  const options: Options = {};
 
   for (let index = 0; index < process.argv.length; index++) {
     const argument = process.argv[index];
     if (argument !== undefined) {
       if (isFlag(argument)) {
         const aurguments = argument.split("=");
-        const key = aurguments[0]?.replace("--", "");
+        const key = aurguments[0]?.replace("--", "") as keyof Options;
 
         if (key !== undefined) {
           let value = aurguments[1];

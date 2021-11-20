@@ -46,7 +46,5 @@ const byValue = (a: UnknownObject, b: UnknownObject) => {
   return arrayCompare(aValues, bValues);
 };
 
-export const objectCompare = (
-  a: UnknownObject,
-  b: UnknownObject,
-): 1 | -1 | undefined => byPreferedKeys(a, b) ?? byKey(a, b) ?? byValue(a, b);
+export const objectCompare = (a: UnknownObject, b: UnknownObject) =>
+  byPreferedKeys(a, b) ?? byKey(a, b) ?? byValue(a, b);

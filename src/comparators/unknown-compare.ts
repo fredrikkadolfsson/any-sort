@@ -7,7 +7,7 @@ export const unknownCompare = <T = undefined>(
   a: unknown,
   b: unknown,
   fallbackValue: T,
-): T | 1 | -1 => {
+): T | typeof aFirst | typeof bFirst => {
   if (a === b) {
     return fallbackValue;
   }
