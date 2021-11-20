@@ -30,6 +30,7 @@
     "lint:prettier": "yarn lint:prettier:base --write",
     "lint:prettier:base": "prettier '**/*!(.js|.ts|.tsx)' --ignore-unknown",
     "lint:prettier:check": "yarn lint:prettier:base --check",
+    "lint:ts": "tsc --noEmit",
     "postinstall": "husky install",
     "postpublish": "pinst --enable",
     "prepare": "yarn build",
