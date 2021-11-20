@@ -1,5 +1,5 @@
 import { aFirst, bFirst } from "../constants";
-import { Array_ } from "../types";
+import type { Array_ } from "../types";
 import { unknownCompare } from "./unknown-compare";
 
 export const arrayCompare = (a: Array_, b: Array_): 1 | -1 | undefined => {

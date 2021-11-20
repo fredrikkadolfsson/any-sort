@@ -1,4 +1,5 @@
-import { Options, setOptions } from "./utils/options";
+import type { Options } from "./utils/options";
+import { setOptions } from "./utils/options";
 import { trueSort as trueSort_ } from "./sorters/true-sort";
 
 export const trueSort = <T>(data: T, options?: Options): T => {

@@ -1,6 +1,6 @@
 import fs from "node:fs";
-import { Object_ } from "../types";
-import { Options } from "./options";
+import type { Object_ } from "../types";
+import type { Options } from "./options";
 
 const isFlag = (s: string): boolean => s.startsWith("--");
 const parsValue = (s: string): string | string[] =>
