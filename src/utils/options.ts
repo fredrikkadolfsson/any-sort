@@ -4,8 +4,8 @@ export type Options = {
 
 let options: Options = {};
 
-export const setOptions = (newOptions: Options): void => {
+export const setOptions = (newOptions: Options) => {
   options = newOptions;
 };
 
-export const getOptions = (): Options => options;
+export const getOptions = () => options;

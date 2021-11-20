@@ -9,7 +9,7 @@ export const isSortable = (s: unknown): s is UnknownSortable =>
   typeof s === "number" ||
   typeof s === "string";
 
-export const sortWeight = (s: unknown): number => {
+export const sortWeight = (s: unknown) => {
   switch (typeof s) {
     case "number":
       return 0;
