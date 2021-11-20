@@ -1,4 +1,4 @@
-import fs from "node:fs";
+import fs from "fs";
 import type { Options } from "./options";
 
 const isFlag = (s: string) => s.startsWith("--");

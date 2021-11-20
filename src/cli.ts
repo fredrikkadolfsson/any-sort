@@ -1,4 +1,4 @@
-import fs from "node:fs";
+import fs from "fs";
 import trueSort from ".";
 import type { UnknownObject } from "./types";
 import { parseArguments } from "./utils/cli-arguments";
