@@ -1,4 +1,4 @@
-import { Object_, Sortable_ } from "../types";
+import type { Object_, Sortable_ } from "../types";
 
 export const isObject = (o: unknown): o is Object_ =>
   Boolean(o) && typeof o === "object";

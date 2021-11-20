@@ -1,5 +1,5 @@
 import { aFirst, bFirst, unchanged } from "../constants";
-import { Object_ } from "../types";
+import type { Object_ } from "../types";
 import { getOptions } from "../utils/options";
 import { trueSort } from "./true-sort";
 

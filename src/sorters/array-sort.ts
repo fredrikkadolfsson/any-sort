@@ -1,5 +1,5 @@
 import { unknownCompare } from "../comparators/unknown-compare";
-import { Array_ } from "../types";
+import type { Array_ } from "../types";
 import { trueSort } from "./true-sort";
 
 export const arraySort = <T = Array_>(array: T): T =>

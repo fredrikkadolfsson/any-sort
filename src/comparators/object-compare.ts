@@ -1,5 +1,5 @@
 import { aFirst, bFirst } from "../constants";
-import { Object_ } from "../types";
+import type { Object_ } from "../types";
 import { getOptions } from "../utils/options";
 import { arrayCompare } from "./array-compare";
 import { unknownCompare } from "./unknown-compare";
