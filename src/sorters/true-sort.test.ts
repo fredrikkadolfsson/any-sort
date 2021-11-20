@@ -1,4 +1,4 @@
-import { trueSort } from "..";
+import { trueSort } from "./true-sort";
 import { expectDeepEqual } from "../testUtils/expect-deep-equal";
 import example from "../testUtils/example.json";
 import exampleSorted from "../testUtils/example.sorted.json";
