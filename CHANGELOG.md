@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/fredrikkadolfsson/true-sort/compare/v0.0.8...v0.0.9) (2021-11-20)
+
+
+### Bug Fixes
+
+* disable prefer-node-protocol ([2e6364e](https://github.com/fredrikkadolfsson/true-sort/commit/2e6364e1859d8f80fc2ca5b64f2eb4462036e58a))
+
 ### [0.0.8](https://github.com/fredrikkadolfsson/true-sort/compare/v0.0.7...v0.0.8) (2021-11-20)
 
 ### [0.0.7](https://github.com/fredrikkadolfsson/true-sort/compare/v0.0.6...v0.0.7) (2021-11-20)
