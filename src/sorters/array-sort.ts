@@ -1,8 +1,8 @@
 import { unknownCompare } from "../comparators/unknown-compare";
-import type { Array_ } from "../types";
+import type { UnknownArray } from "../types";
 import { trueSort } from "./true-sort";
 
-export const arraySort = <T = Array_>(array: T): T =>
-  (array as unknown as Array_)
+export const arraySort = <T extends UnknownArray>(array: T): T =>
+  array
     .map((a) => trueSort(a))
     .sort((a, b) => unknownCompare(a, b, 0)) as unknown as T;

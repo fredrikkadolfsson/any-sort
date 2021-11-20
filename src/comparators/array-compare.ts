@@ -1,8 +1,11 @@
 import { aFirst, bFirst } from "../constants";
-import type { Array_ } from "../types";
+import type { UnknownArray } from "../types";
 import { unknownCompare } from "./unknown-compare";
 
-export const arrayCompare = (a: Array_, b: Array_): 1 | -1 | undefined => {
+export const arrayCompare = (
+  a: UnknownArray,
+  b: UnknownArray,
+): 1 | -1 | undefined => {
   for (const [index, aValue] of a.entries()) {
     const bValue = b[index];
     if (bValue === undefined) {
