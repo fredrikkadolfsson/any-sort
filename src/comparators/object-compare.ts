@@ -1,10 +1,10 @@
 import { aFirst, bFirst } from "../constants";
-import type { Object_ } from "../types";
+import type { UnknownObject } from "../types";
 import { getOptions } from "../utils/options";
 import { arrayCompare } from "./array-compare";
 import { unknownCompare } from "./unknown-compare";
 
-const byPreferedKeys = (a: Object_, b: Object_) => {
+const byPreferedKeys = (a: UnknownObject, b: UnknownObject) => {
   const { preferedSortKeys: preferedSortKeys_ } = getOptions();
 
   if (preferedSortKeys_ !== undefined) {
@@ -32,19 +32,21 @@ const byPreferedKeys = (a: Object_, b: Object_) => {
   return;
 };
 
-const byKey = (a: Object_, b: Object_) => {
+const byKey = (a: UnknownObject, b: UnknownObject) => {
   const aKeys = Object.keys(a);
   const bKeys = Object.keys(b);
 
   return arrayCompare(aKeys, bKeys);
 };
 
-const byValue = (a: Object_, b: Object_) => {
+const byValue = (a: UnknownObject, b: UnknownObject) => {
   const aValues = Object.values(a);
   const bValues = Object.values(b);
 
   return arrayCompare(aValues, bValues);
 };
 
-export const objectCompare = (a: Object_, b: Object_): 1 | -1 | undefined =>
-  byPreferedKeys(a, b) ?? byKey(a, b) ?? byValue(a, b);
+export const objectCompare = (
+  a: UnknownObject,
+  b: UnknownObject,
+): 1 | -1 | undefined => byPreferedKeys(a, b) ?? byKey(a, b) ?? byValue(a, b);

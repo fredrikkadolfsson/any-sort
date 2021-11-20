@@ -11,7 +11,7 @@ test("throws error when missing path", () => {
 test("returns empty object when no options are passed", () => {
   process.argv = ["node", "command", path];
   const returnValue = parseArguments();
-  expect(returnValue).toEqual([absolutPath, {}]);
+  expect(returnValue).toEqual({ path: absolutPath, options: {} });
 });
 
 test("returns options when passed", () => {
@@ -24,13 +24,13 @@ test("returns options when passed", () => {
     "optionValue2",
   ];
   const returnValue = parseArguments();
-  expect(returnValue).toEqual([
-    absolutPath,
-    {
+  expect(returnValue).toEqual({
+    path: absolutPath,
+    options: {
       optionKey: "optionValue",
       optionKey2: "optionValue2",
     },
-  ]);
+  });
 });
 
 test("returns array options when passed", () => {
@@ -43,13 +43,13 @@ test("returns array options when passed", () => {
     "optionValue2A,optionValue2B,optionValue2C",
   ];
   const returnValue = parseArguments();
-  expect(returnValue).toEqual([
-    absolutPath,
-    {
+  expect(returnValue).toEqual({
+    path: absolutPath,
+    options: {
       optionKey: ["optionValueA", "optionValueB", "optionValueC"],
       optionKey2: ["optionValue2A", "optionValue2B", "optionValue2C"],
     },
-  ]);
+  });
 });
 
 test("throws error when option value is missing", () => {

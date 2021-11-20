@@ -1,9 +1,9 @@
-import type { Object_, Sortable_ } from "../types";
+import type { UnknownObject, UnknownSortable } from "../types";
 
-export const isObject = (o: unknown): o is Object_ =>
+export const isObject = (o: unknown): o is UnknownObject =>
   Boolean(o) && typeof o === "object";
 
-export const isSortable = (s: unknown): s is Sortable_ =>
+export const isSortable = (s: unknown): s is UnknownSortable =>
   typeof s === "bigint" ||
   typeof s === "boolean" ||
   typeof s === "number" ||

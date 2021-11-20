@@ -1,10 +1,10 @@
 import { aFirst, bFirst, unchanged } from "../constants";
-import type { Object_ } from "../types";
+import type { UnknownObject } from "../types";
 import { getOptions } from "../utils/options";
 import { trueSort } from "./true-sort";
 
-export const objectSort = <T = Object_>(object: T): T => {
-  const newData: Object_ = {};
+export const objectSort = <T = UnknownObject>(object: T): T => {
+  const newData: UnknownObject = {};
   for (const key of (Object.keys(object) as Array<keyof T>).sort((a, b) => {
     const { preferedSortKeys } = getOptions();
     const aIndex = preferedSortKeys?.indexOf(a as string) ?? -1;

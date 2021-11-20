@@ -1,14 +1,14 @@
 import fs from "node:fs";
-import type { Object_ } from "../types";
+import type { UnknownObject } from "../types";
 import type { Options } from "./options";
 
 const isFlag = (s: string): boolean => s.startsWith("--");
 const parsValue = (s: string): string | string[] =>
   s.includes(",") ? s.split(",") : s;
 
-export const parseArguments = (): [string, Options] => {
+export const parseArguments = (): { path: string; options: Options } => {
   let probablyPath = "";
-  const options: Object_ = {};
+  const options: UnknownObject = {};
 
   for (let index = 0; index < process.argv.length; index++) {
     const argument = process.argv[index];
@@ -41,7 +41,7 @@ export const parseArguments = (): [string, Options] => {
 
   try {
     fs.accessSync(path, fs.constants.F_OK);
-    return [path, options];
+    return { path, options };
   } catch {
     throw new Error("missing path or unauthorised to access given path");
   }
