@@ -3,10 +3,10 @@
   "extends": [
     "plugin:unicorn/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "unicorn/no-useless-undefined": ["error", { "checkArguments": false }]
   }
 }

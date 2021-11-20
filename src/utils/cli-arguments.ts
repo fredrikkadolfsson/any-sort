@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs from "node:fs";
 import { Object_ } from "../types";
 import { Options } from "./options";
 
