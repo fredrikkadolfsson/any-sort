@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/fredrikkadolfsson/true-sort/compare/v0.0.9...v0.0.11) (2024-05-31)
+
+
+### Bug Fixes
+
+* **cli:** add default key ([e4b405d](https://github.com/fredrikkadolfsson/true-sort/commit/e4b405d49a9411bf716138d02a9a56a19a876c51))
+
 ### [0.0.10](https://github.com/fredrikkadolfsson/true-sort/compare/v0.0.9...v0.0.10) (2024-05-31)
 
 
